@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form } from 'formik';
 
-export const FormBox = styled.form`
+export const FormBox = styled(Form)`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -15,14 +16,12 @@ export const Button = styled.button`
   text-decoration: none;
   display: flex;
   width: 100px;
-  /* height: 40px;  */
+
   color: white;
-  /* padding: 20px 30px; */
+
   margin-top: 10px;
 
   border-radius: 10px;
-
-  /* text-transform: uppercase; */
 
   background-image: linear-gradient(
     to right,

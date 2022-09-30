@@ -13,7 +13,7 @@ const SectionPhoneBook = ({
   return (
     <Secton>
       <h1>{title}</h1>
-      <Form OnSubmit={OnSubmit} />
+      <Form OnSubmitForm={OnSubmit} />
       <Contact
         filter={filter}
         filteredContacts={filteredContacts}
