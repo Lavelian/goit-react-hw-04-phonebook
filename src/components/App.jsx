@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
-import SectionPhoneBook from './SectionPhoneBook/';
+import Container from './Container';
+import Form from 'components/Form';
+import Contact from 'components/Contact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const LS_KEY = 'contacts';
@@ -53,16 +55,16 @@ export default function App() {
   const notify = () => toast('There is already a contact');
   const filteredContacts = getFilteredContacts();
   return (
-    <>
-      <SectionPhoneBook
-        title={'PhoneBook'}
-        OnSubmit={formSubmitHandler}
-        filteredContacts={filteredContacts}
+    <Container>
+      <h1>PhoneBook</h1>
+      <Form OnSubmitForm={formSubmitHandler} />
+      <Contact
         filter={filter}
+        filteredContacts={filteredContacts}
         handleChange={handleChange}
         removeBook={removeBook}
       />
       <ToastContainer />
-    </>
+    </Container>
   );
 }

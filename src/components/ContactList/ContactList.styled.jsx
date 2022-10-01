@@ -1,19 +1,13 @@
 import styled from 'styled-components';
-export const Container = styled.div`
-  &label {
-    margin-bottom: 4px;
-  }
-  & input {
-    margin-top: 5px;
-    display: block;
-    width: 200px;
-    margin-bottom: 10px;
-  }
+export const ContactsList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
 `;
-
 export const LiItem = styled.li`
   display: flex;
   align-items: center;
+
   & span {
     margin-right: 10px;
   }
